@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="946.0" minHeight="500" minWidth="750.0" prefHeight="679.0" prefWidth="946.0" style="-fx-background-color: GAINSBORO;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button fx:id="decryptButton" layoutX="692.0" layoutY="596.0" mnemonicParsing="false" onAction="#pressDecrypt" prefHeight="52.0" prefWidth="150.0" style="-fx-background-color: LIGHTSLATEGRAY; -fx-border-color: black;" text="Decrypt">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Label layoutX="383.0" layoutY="14.0" prefHeight="27.0" prefWidth="176.0" text="RSA Encryption" textAlignment="CENTER">
+            <font>
+                <Font size="25.0" />
+            </font>
+            <textFill>
+                <RadialGradient centerX="0.1711111068725586" centerY="0.5" radius="0.5">
+                    <stops>
+                        <Stop color="#59528f" />
+                        <Stop color="#0077ff" offset="1.0" />
+                    </stops>
+                </RadialGradient>
+            </textFill>
+        </Label>
+        <Button fx:id="encryptButton" layoutX="106.0" layoutY="596.0" mnemonicParsing="false" onAction="#pressEncrypt" prefHeight="52.0" prefWidth="150.0" style="-fx-background-color: LIGHTSLATEGRAY; -fx-border-color: black;" text="Encrypt">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Label layoutX="702.0" layoutY="362.0" prefHeight="27.0" prefWidth="142.0" text="Encrypted text:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="plainText" layoutX="13.0" layoutY="389.0" prefHeight="200.0" prefWidth="358.0" style="-fx-background-color: black;" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font></TextArea>
+        <TextArea fx:id="encryptedText" layoutX="577.0" layoutY="389.0" prefHeight="200.0" prefWidth="358.0" style="-fx-background-color: black;" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font></TextArea>
+        <Label layoutX="28.0" layoutY="59.0" prefHeight="52.0" prefWidth="904.0" text="You need to provide a text to be encrypted/decrypted and a key size in bits. It is indicated to use a key size &gt; 1024 bits. ">
+            <font>
+                <Font size="17.0" />
+            </font></Label>
+        <Label layoutX="446.0" layoutY="132.0" prefHeight="27.0" prefWidth="49.0" text="Size:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="size" layoutX="421.0" layoutY="159.0" prefHeight="35.0" prefWidth="83.0" style="-fx-border-color: black;">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </TextField>
+        <Button fx:id="random" layoutX="403.0" layoutY="210.0" mnemonicParsing="false" onAction="#randomizeKey" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: LIGHTSLATEGRAY; -fx-border-color: black;" text="Generate Keys">
+            <font>
+                <Font size="14.0" />
+            </font></Button>
+        <Text layoutX="127.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Public Key:" wrappingWidth="131.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <TextArea fx:id="publicKey" layoutX="13.0" layoutY="140.0" prefHeight="200.0" prefWidth="358.0" style="-fx-background-color: black;" wrapText="true" />
+        <TextArea fx:id="privateKey" layoutX="574.0" layoutY="140.0" prefHeight="200.0" prefWidth="358.0" style="-fx-background-color: black;" wrapText="true" />
+        <Text layoutX="702.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Key:" wrappingWidth="130.9999999999999">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Label layoutX="127.0" layoutY="362.0" prefHeight="27.0" prefWidth="142.0" text="Plain text:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>
