@@ -11,5 +11,4 @@ and a private key for decrypting it.
 5. Computes d*e = mod(ϕ(n)).
 The public key is hte pair (n, e), while the private key is the pair (n, d)
 
-How it looks: https://imgur.com/zATCurM
-https://imgur.com/zATCurM.png
+How it looks: https://imgur.com/zATCurMS
